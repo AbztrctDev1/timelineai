@@ -72,7 +72,7 @@ const CreateMemory = () => {
         setIsGenerating(true);
 
         try {
-            const webhookUrl = 'https://agencia360.app.n8n.cloud/webhook-test/1d4c422e-b9df-4fdd-815a-f52de28cdf91';
+            const webhookUrl = 'https://agencia360.app.n8n.cloud/webhook/1d4c422e-b9df-4fdd-815a-f52de28cdf91';
 
             // Use FormData to send both text and file data
             const data = new FormData();
