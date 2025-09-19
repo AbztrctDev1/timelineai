@@ -15,7 +15,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // This "catch-all" route is essential for single-page apps (like React Router)
 // It sends the index.html for any request that doesn't match a static file
-app.get('*', (req, res) => {
+// Correct and more robust line
+app.get(/^\/(?!api).*/, (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
